@@ -15,7 +15,7 @@ define([
     routes: {
       '': 'default',
       'custom/:year/:month/:day': 'custom',
-      'vacation': 'vacation',
+      'springbreak': 'springbreak',
       '*notfound': 'notFound'
     },
 
@@ -31,14 +31,14 @@ define([
 
     default: function() {
       var date = new Holidays({
-        url: 'js/json/ea_holidays.json'
+        url: 'js/json/us_holidays.json'
       });
       this.addToView(date);
     },
 
-    vacation: function() {
+    springbreak: function() {
       var date = new Holidays({
-        url: 'js/json/vacation.json'
+        url: 'js/json/springbreak.json'
       });
       this.addToView(date);
     },
